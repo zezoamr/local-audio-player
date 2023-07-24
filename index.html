@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Audio Player</title>
 </head>
 <body>
-    
+    <div id="player-app" class="grid">
+        <div id="top-container" class="container">
+            <h1>My Audio Player</h1>
+        </div>
+        <div id="player">
+            <audio src="" controls></audio>
+        </div>
+        
+        <div id="playlist" class="container">
+            <h3>playlist</h3>
+            <button onclick=startplaylist()>start playlist</button>
+            <ul>
+                <li onclick=playsong(this)>song 1</li>
+                <li onclick=playsong(this)>song 2</li>
+                <li onclick=playsong(this)>song 3</li>
+            </ul>
+        </div>
+        <div id="currently-playing" class="container">
+            <!-- Your content here -->
+            current song
+        </div>
+    </div>
 </body>
 </html>
