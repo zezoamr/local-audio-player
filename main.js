@@ -28,6 +28,7 @@ input.addEventListener('change', function () { // Get the selected file
     newSong.textContent = file.name;
 
     newSong.addEventListener('click', event => { // console.log(event.target)
+        console.log('here')
         player.src = songs[getLiPosition(event.target)]
     });
 
@@ -37,7 +38,10 @@ input.addEventListener('change', function () { // Get the selected file
     removeIcon.textContent = '×';
 
     // Add an event listener to the remove icon
-    removeIcon.addEventListener('click', function (event) { // Get the index of the li element
+    removeIcon.addEventListener('click', function (event) { 
+        event.stopPropagation()
+
+        // Get the index of the li element
         let index = Array.from(playlist.children).indexOf(newSong);
 
         // Check if the song being removed is the current song
