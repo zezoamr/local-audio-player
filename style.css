@@ -2,6 +2,15 @@
     color: #333;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#player-app {
+    min-height: 100%;
+}
+
 #player-app {
     background: radial-gradient(circle, #47aed1, #9bc2e4);
 }
@@ -43,6 +52,7 @@
     justify-content: center;
     align-items: center;
     grid-area: currently-playing;
+    font-size: 20px;
 }
 
 .container {
@@ -66,6 +76,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    font-size: 15px;
 
     background-color: #4cafa5;
     color: white;
@@ -89,20 +100,36 @@
     align-items: center;
     margin-right: 20%;
 
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 10px;
     cursor: pointer;
+    list-style: none;
+    
+    border: 1px solid #8dc7da;
+    max-height: 90px;
+    overflow-y: auto;
+}
+
+#playlist li {
+    margin: 2px 0;
 }
 
 #playlist li:hover {
     color: #4caf82;
 }
 
+.remove-icon {
+    padding-left: 10px;
+    font-size: 17px;
+    color: #f00;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 736px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
         grid-template-areas: 
         "top-container top-container"
         "player player"

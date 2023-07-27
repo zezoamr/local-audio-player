@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <title>Audio Player</title>
 </head>
 <body>
@@ -18,16 +18,13 @@
         
         <div id="playlist" class="container">
             <h3>playlist</h3>
-            <button onclick=startplaylist()>start playlist</button>
+            <button id="addSong">Add a Song</button>
             <ul>
-                <li onclick=playsong(this)>song 1</li>
-                <li onclick=playsong(this)>song 2</li>
-                <li onclick=playsong(this)>song 3</li>
-            </ul>
+            </ul>            
         </div>
         <div id="currently-playing" class="container">
             <!-- Your content here -->
-            current song
+            waiting to play
         </div>
     </div>
 </body>
